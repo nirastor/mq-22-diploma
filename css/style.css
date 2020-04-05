@@ -19,16 +19,8 @@
 
 html {
     font-family: "Open Sans", "Arial", sans-serif;
+    overflow-x: hidden;
 }
-
-/* temporary rule for mobile development */
-section:nth-of-type(1),
-section:nth-of-type(2) {
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* end of tmp rule */
 
 .header{
     position: relative;
@@ -147,7 +139,8 @@ section:nth-of-type(2) {
     color: #e7e7e7;
     text-transform: uppercase;
     margin-top: 25px;
-    margin-bottom: 246px;
+    margin-bottom: 73vw;
+    padding-left: 20px;
 }
 
 .athlets-picture {
@@ -397,16 +390,60 @@ section:nth-of-type(2) {
 
     .athlets-picture {
         position: absolute;
-        width: 60%;
-        top: 65px;
-        left: -100px;
+        width: 450px;
+        top: 0;
+        left: auto;
+        right: 63%;
     }
 
     .players-picture {
         position: absolute;
-        width: 60%;
-        top: 65px;
-        right: -100px;
+        width: 650px;
+        top: -30px;
+        left: 42%;
+    }
+
+    .athlets .article {
+        padding: 40px 32px 35px 38%;
+    }
+
+    .section-header {
+        font-size: 80px;
+        margin-top: 84px;
+        margin-bottom: 22px;
+        padding-left: 38%;
+    }
+
+    .players .section-header {
+        padding-left: 32px;
+    }
+
+
+    .article-header {
+        font-size: 32px;
+    }
+
+    .article-header::before {
+        font-size: 18px;
+    }
+
+    .article-header::after{
+        width: 19px;
+        height: 5px;
+        border-radius: 2px;
+    }
+
+    .article-content {
+        font-size: 15px;
+        padding-left: 34px;
+    }
+
+    .article:nth-of-type(1) {
+        background-color: #fff;
+    }
+
+    .players .article {
+        padding: 40px 292px 35px 32px;
     }
 
     .feature-header {
@@ -483,18 +520,6 @@ section:nth-of-type(2) {
 
     .app-button-image {
         height: 45px;
-    }
-
-    .athlets .article {
-        padding: 40px 32px 35px 292px;
-    }
-
-    .article:nth-of-type(1) {
-        background-color: #fff;
-    }
-
-    .players .article {
-        padding: 40px 292px 35px 32px;
     }
 
     .feature {
