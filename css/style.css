@@ -22,8 +22,8 @@ html {
 }
 
 /* temporary rule for mobile development */
-section,
-footer {
+section:nth-of-type(1),
+section:nth-of-type(2) {
     width: 320px;
     margin-left: auto;
     margin-right: auto;
@@ -161,6 +161,42 @@ footer {
     padding: 60px 20px 55px 20px;
 }
 
+.article-header::before {
+    font-size: 14px;
+    color: #000000;
+    position: relative;
+    top: -7px;
+    padding-right: 9px;
+    font-weight: bold;
+}
+
+.article-header::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -9px;
+    width: 15px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: #5e42b0;
+}
+
+.article:nth-of-type(1) .article-header::before {
+    content: "01";
+}
+
+.article:nth-of-type(2) .article-header::before {
+    content: "02";
+}
+
+.article:nth-of-type(3) .article-header::before {
+    content: "03";
+}
+
+.athlets .article:nth-of-type(3) .article-header::after {
+    background-color: #ffffff;
+}
+
 .article:first-of-type {
     padding-top: 83px;
 }
@@ -206,12 +242,23 @@ footer {
     color: #ffffff;
 }
 
-.feature-image {
+.players .article:nth-of-type(3) .article-header::before {
+    color: #5e42b0;
+}
+
+.players .article:nth-of-type(3) .article-header::after {
+    background-color: #ffffff;
+}
+
+.feature-image,
+.feature-picture {
     width: 100%;
+    display: block;
 }
 
 .feature {
     margin: 36px 20px 79px 20px;
+    position: relative;
 }
 
 .feature-header {
@@ -220,6 +267,39 @@ footer {
     text-transform: uppercase;
     font-size: 28px;
     line-height: 28px;
+}
+
+.article-feature {
+    position: relative;
+}
+
+.feature-num-block {
+    width: 70px;
+    height: 70px;
+    background-color: #5e42b0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -90px;
+}
+
+.feature-num-content {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.feature-num-content::after {
+    content: "";
+    width: 15px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    display: block;
+    opacity: 0.3;
+    z-index: 2;
 }
 
 .footer{
@@ -244,6 +324,18 @@ footer {
     z-index: 10;
     text-transform: uppercase;
     color: #ffffff;
+}
+
+.footer-logo-container {
+    width: 72px;
+    height: 74px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(#7756d7, #50379b);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .download-text {
@@ -272,7 +364,6 @@ footer {
     width: 58px;
 }
 
-
 @media (min-width: 641px) {
 
     .app-buttons {
@@ -281,7 +372,9 @@ footer {
     }
 
     .app-button {
-        min-width: 310px;
+        width: 40%;
+        flex-shrink: 0;
+        flex-grow: 0;
         max-width: 310px;
         padding-left: 0;
         min-height: 75px;
@@ -300,6 +393,65 @@ footer {
     .app-button-text {
         padding-left: 26px;
         font-size: 14px;
+    }
+
+    .athlets-picture {
+        position: absolute;
+        width: 60%;
+        top: 65px;
+        left: -100px;
+    }
+
+    .players-picture {
+        position: absolute;
+        width: 60%;
+        top: 65px;
+        right: -100px;
+    }
+
+    .feature-header {
+        font-size: 80px;
+    }
+
+    .feature-content {
+        font-size: 24px;
+    }
+
+    .feature-num-content {
+        font-size: 24px;
+    }
+
+    .feature-num-content::after {
+        width: 24px;
+        height: 5px;
+        border-radius: 2px;
+    }
+
+    .footer-logo-container {
+        width: 130px;
+        height: 135px;
+    }
+
+    .logo-pic {
+        width: 102px;
+    }
+
+    .download-header {
+        font-size: 60px;
+    }
+    
+    .download-subtitle {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 800px) {
+    .download-header {
+        font-size: 80px;
+    }
+
+    .download-subtitle {
+        font-size: 36px;
     }
 }
 
@@ -332,6 +484,45 @@ footer {
     .app-button-image {
         height: 45px;
     }
+
+    .athlets .article {
+        padding: 40px 32px 35px 292px;
+    }
+
+    .article:nth-of-type(1) {
+        background-color: #fff;
+    }
+
+    .players .article {
+        padding: 40px 292px 35px 32px;
+    }
+
+    .feature {
+        margin: 86px 30px;
+    }
+
+    .feature-header {
+        margin-bottom: 34px;
+    }
+
+    .feature-num-block {
+        width: 115px;
+        height: 115px;
+        top: -170px;
+    }
+
+    .footer-container {
+        padding: 126px 32px 20px 32px;
+    }
+
+    .download-text {
+        margin-top: 77px;
+    }
+    
+    .app-buttons-footer {
+        margin-top: 282px;
+        margin-bottom: 48px;
+    }
 }
 
 @media (min-width: 961px) {
@@ -357,6 +548,7 @@ footer {
     .part-2 {
         padding-left: 0px;
         align-self: flex-end;
+        text-align: right;
     }
 
     .app-buttons-header {
@@ -365,5 +557,85 @@ footer {
 
     .app-button-image {
         height: 50px;
+    }
+
+    .article-feature {
+        display: flex;
+    }
+
+    .feature-picture {
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    .feature {
+        width: 50%;
+        margin: 0;
+        flex-shrink: 0;
+        flex-grow: 0;
+        box-sizing: border-box;
+        padding: 12% 6% 20px 6%;
+    }
+
+    .feature-header {
+        margin-bottom: 10%;
+        line-height: 80px;
+    }
+
+    .feature-num-block {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .article-feature:nth-of-type(odd) .feature-num-block {
+        top: 24%;
+        left: -4vw;
+    }
+
+    .article-feature:nth-of-type(1) .feature-num-block {
+        top: 26%;
+    }
+
+    .article-feature:nth-of-type(even) .feature-num-block  {
+        top: 24%;
+        right: -4vw;
+    }
+
+    .article-feature:nth-of-type(even) .feature {
+        padding-left: 10%;
+        padding-right: 6vw;
+    }
+
+    .article-feature:nth-of-type(even) .feature-picture {
+        order: 1;
+    }
+
+    .footer {
+        padding-top: 216px;
+        padding-bottom: 33px;
+    }
+
+    .footer-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .download-text {
+        margin-top: 0;
+    }
+
+    .footer-logo-container {
+        margin-left: 0;
+        margin-right: 35px;
+    }
+    
+    .footer-download-text {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .app-buttons-footer {
+        margin-top: 130px;
+        margin-bottom: 240px;
     }
 }
