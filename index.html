@@ -48,7 +48,11 @@
     </header>
 
     <section class="athlets">
-        <img src="img/footballer_192.png" alt="footballer" class="athlets-picture">
+        <picture class="athlets-picture">
+            <source media="(min-width: 641px)" srcset="img/footballer_566.png" class="athlets-image">
+            <source media="(max-width: 640px)" srcset="img/footballer_192.png" class="athlets-image">
+            <img src="img/footballer_192.png" alt="footballer" class="athlets-image">
+        </picture>
         <div class="athlets-container">
             <h2 class="section-header athlets-header">Athlets</h2>
             
@@ -70,7 +74,11 @@
     </section>
     
     <section class="players">
-        <img src="img/basketballer_302.png" alt="basketballer" class="players-picture">
+        <picture class="players-picture">
+            <source media="(min-width: 641px)" srcset="img/basketballer_991.png" class="players-image">
+            <source media="(max-width: 640px)" srcset="img/basketballer_302.png" class="players-image">
+            <img src="img/basketballer_302.png" alt="basketballer" class="players-image">
+        </picture>
         <div class="players-container">
             <h2 class="section-header players-header">Players</h2>
             
