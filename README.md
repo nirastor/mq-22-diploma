@@ -1,1 +1,1 @@
-# mq-22-diploma
+GithubPages — https://nirastor.github.io/mq-22-diploma/
